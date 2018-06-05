@@ -1,0 +1,17 @@
+<ng-sidebar-container style='height:100vh;'>
+ 
+  <!-- A sidebar -->
+  <ng-sidebar opened=true>
+    <ul class="list-unstyled">
+      <li *ngFor="let player of players">
+        <a (click)="update(player)">{{player}}</a><hr />
+      </li>
+    </ul>
+  </ng-sidebar>
+
+  <!-- Page content -->
+  <div ng-sidebar-content style="padding-left:150px;">
+    <h1>{{selectedPlayer}}</h1>
+  </div>
+
+</ng-sidebar-container>
